@@ -1,0 +1,98 @@
+<html>
+    <style>
+        #textButton {
+            background-color: white;
+            color: black;
+            border: 2px solid green;
+            font-size: 12px;
+            padding: 10px;
+            width: 10%;
+        }
+        #textButton:hover {
+            background-color: green;
+            color: white;
+        }
+        .title {
+            background-color: lightgray;
+            line-height: 0.5;
+            width: 100%;
+            padding: 10px;
+            padding-left: 4em;
+        }
+        .topText {
+            font-size: small;
+            font-weight: bold;
+        }
+        .topText2 {
+            font-size: small;
+            font-weight: bold;
+        }
+        #regEx {
+            width: 90%;
+            height: 20px
+        }
+        #testInput {
+            width: 90%;
+            height: 60px;
+        }
+        #display {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .bottomText {
+            line-height: 0.5;
+        }
+        #copyright {
+        position: absolute;
+        bottom: 5px;
+        color: dodgerblue;
+        animation: blink 2s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes blink {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+    </style>
+<div class = title>
+    <H1 style="font: size 50px;">Regex Parser</H1>
+    This is a website for testing your regular expressions!
+</div>
+
+<br />
+<br />
+
+
+<p class = enterreg>
+<div class = topText>
+    Type your regular expression below:
+</div>
+<div class = textField>
+    <input type="text" id="regEx" name="regularExpression"><br></br>
+</div>
+<div class = topText2>
+    Type your text below:
+</div>
+<div>
+    <textarea input type="text" id="testInput" name="textExpression"></textarea>
+</div>
+</p>
+
+<button type="button" id = "textButton" onclick="highlight()">Parse!</button>
+
+<p class = bottomText>
+    <div class = outputText>
+        The result of parsing your regex on the input text you've provided:
+    </div>
+    <div id = "display"></div>
+</p>
+<div id="copyright">Copyright (C) Jarrod Daniels 2020</div>
+<script src = 'regex.js'></script>
+
+</html>
